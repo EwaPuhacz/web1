@@ -1,0 +1,650 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inconsolata", monospace;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+p {
+    color: rgb(30, 29, 29);
+}
+
+.link {
+    text-decoration: underline; /* Underline links */
+    color: #242323; /* Distinctive blue color */
+    position: relative;
+    padding-right: 15px; /* Add space for icon */
+}
+
+/* TRANSITION */
+a, 
+.btn {
+    transition: all 300ms ease;
+}
+
+nav, .nav-links {
+    display: flex;
+}
+
+nav {
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 0.3rem;
+}
+
+.nav-links {
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    text-decoration-color: rgb(250, 250, 251);
+}
+
+a:hover, a:focus {
+    color: grey;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: rgb(180, 180, 180);
+}
+
+.logo {
+    font-size: 2rem;
+}
+
+.logo:hover {
+    cursor: default;
+}
+
+/* HAMBURGER MENU */
+#hamburger-nav {
+    display: none;
+}
+
+
+
+.hamburger-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.hamburger-icon span {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-links {
+    position: absolute;
+    top: 100%;
+    background-color: white;
+    width: fit-content;
+    right: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-links a {
+    display:block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-links li {
+    list-style: none;
+}
+
+.menu-links.open {
+    max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+    transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+    transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+    transform: none;
+}
+
+.hamburger-icon span:first-child {
+    opacity: 1;
+}
+
+.hamburger-icon span:first-child {
+    transform: none;
+}
+
+/* SECTIONS */
+
+.profile-image{
+    width: 200px;  /* Adjust the size as needed */
+    height: 200px; /* Ensure the image is square */
+    border-radius: 50%;
+    object-fit: cover;
+}
+.ewa{
+    color: rgb(128, 4, 4);
+}
+
+.section {
+    position: relative;
+    z-index: 1; /* Adjust as needed */
+    padding-top: 4vh;
+    height:96vh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+.section__content {
+    display: flex;
+    align-items: center;
+}
+
+.section__content1 {
+    display: flex;
+    align-items: center;
+    margin-right: 10%;
+    margin-left: 20%;
+    margin-top: 1%;
+    margin-bottom: 1%;    
+}
+
+.section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+    margin-top: 0.5rem; 
+    padding: 20px;
+}
+.section__text-container{
+    margin-left: 20%;
+}
+
+#profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem; /* Adjust this value to control the spacing */
+}
+
+.section__pic-container {
+    flex:1;
+    justify-content: center;
+    display: flex;
+    align-items: center; /* Align items vertically if there's other content */
+}
+.section__pic-container1 {
+    flex: 1;
+    display: flex;
+    align-items: center; /* Align items vertically if there's other content */
+    justify-content: center;
+    margin-bottom: 30%;
+}
+
+.section__pic-container img {
+    border-radius: 10px; /* Adjust this value for more or less rounded corners */
+    width: 350px; /* Set a fixed width for the square image */
+    height: 350px; /* Set the same value for height to maintain the square shape */
+    object-fit: cover; /* Ensure the image covers the container without distortion */
+    margin-right: 110px; /* Optional: Add some space between the image and the text */
+    margin-top: 20%;
+}
+
+.section__pic-container img:hover {
+    /* Add your hover styles here */
+    transform: scale(1.1); /* Example: Increase the size of the image */
+    opacity: 0.8; /* Example: Reduce the opacity of the image */
+    /* Add any other styles you want to apply on hover */
+}
+.section__pic-container1 img {
+    border-radius: 10px; /* Adjust this value for more or less rounded corners */
+    width: 200px; /* Set a fixed width for the square image */
+    height: 200px; /* Set the same value for height to maintain the square shape */
+    object-fit: cover; /* Ensure the image covers the container without distortion */
+    margin-right: 110px; /* Optional: Add some space between the image and the text */
+    margin-top: 20%;
+}
+
+.section__pic-container1 img:hover {
+    /* Add your hover styles here */
+    transform: scale(1.1); /* Example: Increase the size of the image */
+    opacity: 0.8; /* Example: Reduce the opacity of the image */
+    /* Add any other styles you want to apply on hover */
+}
+
+.section__text {
+    text-align: center;
+}
+
+.section__text__p1 {
+    text-align: center;
+    color: brown;
+    font-size: large;
+    margin-bottom: 20px;
+}
+
+.section__text__p2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#socials-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+.icon {
+    cursor: pointer;
+    height: 2rem;
+    transition: transform 0.3s ease; /* Smooth transition */
+    margin-top: 3%;
+}
+.icon:hover {
+    transform: scale(1.2); /* Scale up by 20% */
+}
+
+/* BUTTONS */
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn {
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem;
+    width: 8rem;
+    border-radius: 2rem;
+    text-align: center;
+}
+
+.btn-color-1,
+.btn-color-2 {
+    border: rgb(53, 53, 53) 0.1rem solid;
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+    cursor: pointer;
+}
+
+.btn-color-1,
+.btn-color-2:hover {
+    background: rgb(128, 4, 4);
+    color: white;
+}
+
+.btn-color-2{
+    background: none;
+}
+
+.btn-color-2:hover{
+    border:rgb(255,255,255) 0.1rem solid;
+}
+
+.btn-container{
+    gap: 1rem;
+}
+
+h3 {
+    margin-bottom: 20px;
+}
+
+/*about*/
+
+.ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* Remove bullets and adjust padding */
+ul.no-bullets, ul.no-bullets ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* Style the <li> elements */
+ul.no-bullets li {
+    margin-bottom: 10px; /* Adjust as needed */
+}
+
+/* Optional: Style the nested <ul> */
+ul.no-bullets ul {
+    margin-top: 5px; /* Adjust as needed */
+}
+/*esto es una cosa y lo otro otra*/
+
+#about{
+    position: relative;
+}
+.about-pic{
+    border-radius: 2rem;
+}
+
+.about-pic1{
+    border-radius: 2rem;
+    width: 100%; /* Ensure the image takes up full width */
+    height: 100%;
+    max-width: 400px; /* Adjust maximum width as needed */
+    max-height: 600px;
+}
+
+.education-courses-flex-container {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    gap: 20px; /* Space between Education and Courses */
+}
+.details-container {
+    padding: 1.5rem;
+    flex: 1;
+    background: white;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    text-align: center;
+    width: 50%;  /* Adjust the width to fit two in a row */
+    margin-bottom: 65px;
+}
+
+.details-container1 {
+    padding: 1.5rem;
+    flex: 1;
+    background: white;
+    border-radius: 2rem;
+    text-align: center;
+    width: 50%;  /* Adjust the width to fit two in a row */
+    margin-bottom: 65px;
+}
+
+.about-grid {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/*LANGUAGE FLAGS & BUTTONS*/
+.language-buttons {
+    display: flex;
+    gap: 10px;
+    margin: 10px;
+}
+.language-buttons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.language-buttons button a {
+    text-decoration: none;
+    color: inherit;
+}
+.language-buttons img {
+    width: 30px;
+    height: auto;
+}
+.language-buttons .disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+/**EXPERIENCE*/
+#experience{
+    position: relative;
+}
+
+/*WORK EXPERIENCE*/
+
+.work-experience-container {
+    padding: 20px;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Make the container span the entire width of the page */
+    max-width: 95%; /* Set the maximum width of the container to 95% of the viewport width */
+    margin: auto; /* Center the container horizontally */
+}
+@media (max-width: 768px) {
+    .work-experience-container {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        align-items: stretch; /* Stretch items to fill the container horizontally */
+    }
+}
+/*OFFER*/
+#experience,
+.work-experience-container{
+    margin-top: 2;
+}
+
+.details-container-work {
+    padding: 1.5rem;
+    flex: 1;
+    background: white;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    text-align: center;
+    width: 100%;  /* Adjust the width to fit two in a row */
+    margin-bottom: 65px;
+}
+
+.icon1 {
+    cursor: pointer;
+    height: 4rem;
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.icon2{
+    cursor: pointer;
+    height: 7rem;
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.icon3{
+    cursor: pointer;
+    height: 7rem;
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+.icon3:hover {
+    transform: scale(1.2); /* Scale up by 20% */
+}
+/**nowe*/
+
+.details-container {
+    flex: 1; /* Each container takes equal space */
+    padding: 0 20px; /* Add padding for spacing */
+}
+
+.about-pic2 {
+    width: 100%; /* Ensure the image takes up full width */
+    height: 100%;
+    max-width: 800px; /* Adjust maximum width as needed */
+    max-height: 1000px;
+}
+.section-container1 {
+    display: flex;
+    justify-content: space-around; /* Adjust spacing between elements */
+    align-items: center; /* Align elements vertically */
+    width: 1000px;
+    height: 500px;
+
+}
+/***/
+.section__pic-container1{
+    display: flex;
+    height: 400px;
+    width: 400px;
+    margin:auto 0;
+}
+
+/* Make Desktop Menu Sticky */
+#desktop-nav {
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure it stays on top of other content */
+    background-color: #fff; /* Ensure background color for better visibility */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: add a slight shadow */
+}
+
+/* Make Hamburger Menu Sticky */
+#hamburger-nav {
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure it stays on top of other content */
+    background-color: #fff; /* Ensure background color for better visibility */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: add a slight shadow */
+}
+.section-container {
+    margin: 5px 20px; /* Adjust this value to control the space between sections */
+    padding: 5px; /* Adjust this value to control the padding within each section */
+}
+@media only screen and (max-width: 768px) {
+    /* Centering the Columns */
+    .about-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /* Adjusting Individual Containers */
+    .details-container {
+        text-align: center;
+        width: 80%; /* Set the same width as in languages */
+    }
+/* Ensure the profile section is always visible */
+#profile {
+    display: block !important;
+}
+
+/* Adjust the layout to accommodate smaller screens */
+.section__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Adjust the size of the profile picture for smaller screens */
+.about-pic1 {
+    width: 300px;
+    height: 300px;
+    display: block; /* Ensure it's a block-level element */
+    margin: 0 auto; /* Center horizontally by setting left and right margins to auto */
+}
+
+
+/* Center align text and buttons */
+.section__text-container {
+    text-align: center;
+}
+
+.btn-container {
+    margin-top: 10px; /* Adjust as needed */
+}
+
+/* Adjust social icons */
+#socials-container {
+    margin-top: 20px; /* Adjust as needed */
+}
+
+/* Adjust spacing between sections */
+.section-container {
+    margin-bottom: 20px; /* Adjust as needed */
+}
+
+}
+/* Media Queries for Small Screens (up to 991px) */
+@media only screen and (max-width: 991px) {
+    /* Centering the Columns */
+    .about-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Adjusting Individual Containers */
+    .details-container {
+        text-align: center;
+        width: 80%; /* Set the same width as in languages */
+    }
+
+    /* Making icons smaller */
+    .icon1, .icon2, .icon3 {
+        width: 50px; /* Adjust the width as needed */
+        height: auto;
+    }
+
+    /* Ensuring all tables have the same width */
+    .about-grid .details-container {
+        width: 80%;
+    }
+    @media (max-width:768px) {
+        header{
+            padding: 12px 4%;
+        }
+     
+      .new{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: white; 
+    row-gap: 1.4rem;
+    padding: 20px;
+    transition: 0.3s;
+    text-align: center;
+      }
+      
+    }
+}

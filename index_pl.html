@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mój Pierwszy Portfolio Pracujący</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">Ewa Puhacz</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">O mnie</a></li>
+                <li><a href="#experience">Doświadczenie</a></li>
+                <li><a href="#offer">Oferta</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </div>
+        <div class="language-buttons">
+            <button class="lang-button" data-lang="es">
+                <img src="assets/spanish-flag.png" alt="Español">
+            </button>
+            <button class="lang-button" data-lang="pl">
+                <img src="assets/polish-flag.png" alt="Polski">
+            </button>
+            <button class="lang-button" data-lang="en">
+                <img src="assets/english-flag.png" alt="English">
+            </button>
+        </div>
+    </nav>
+
+    <nav id="hamburger-nav">
+        <div class="logo">Ewa Puhacz</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">O mnie</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Doświadczenie</a></li>
+                <li><a href="#offer" onclick="toggleMenu()">Oferta</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="profile" class="section-container">
+        <div class="section__content">
+            <div class="section__pic-container">
+                <img src="assets/profile-pic.png" alt="Zdjęcie profilowe Ewy Puhacz" class="profile-image">
+            </div>
+            <div class="section__text-container">
+                <div class="section__text">
+                    <h3 class="section__text__p1">Cześć, jestem</h3>
+                    <h1 class="title">Ewa Puhacz</h1>
+                    <p class="section__text__p2">Nauczycielka Języków Obcych</p>
+                </div>
+                <div class="btn-container">
+                    <button class="btn btn-color-2" onclick="window.open('./assets/resume-example.pdf')">Pobierz CV</button>
+                    <button class="btn btn-color-1" onclick="location.href= '#contact'">Informacje Kontaktowe</button>
+                </div>
+                <div id="socials-container">
+                    <img src="./assets/linkedin.png" alt="Mój profil Linkedin" class="icon" onclick="location.href='https://www.linkedin.com/in/ewa-puhacz-88a0b17b/'">
+                </div>
+            </div>
+        </div>
+    </section>  
+    <section id="about" class="section-container">
+        <div class="section-container">
+            <div class="about-grid">
+            </div> <p class="section__text__p1">Dowiedz się więcej</p>
+            
+            <h1>O mnie</h1>
+            <img src="./assets/girl.png" alt="Ikona dziewczyny" class="icon">
+            <h3>"Zafascynowana poszerzaniem wiedzy oraz odkrywaniem nowych horyzontów, zarówno w dosłownym, jak i przenośnym znaczeniu."</h3>
+            </div>
+        </div>
+    </section>
+
+                <!--section new-->
+                <section>
+                    <div class="section-container">
+                       <div class="about-grid">
+                           <div class="details-container1">
+                            <img src="./assets/about-pic.jpg" alt="zdjęcie" class="about-pic1"> 
+                           </div>
+                           <div class="details-container">
+                            <img src="./assets/languages.png" alt="Ikona języka" class="icon">
+                               <h2>Języki</h2>
+                               <ul class="no-bullets">
+                                <li><b>Polski - ojczysty - C2</b></li>
+                                <li><b>Angielski - biegły - C2:</b> <a href="https://en.wikipedia.org/wiki/C2_Proficiency" target="_blank" class="link">Certyfikowany przez Cambridge Certificate of Proficiency in English (2011)</a></li>
+                                <li><b>Hiszpański - biegły - C2:</b> <a href="https://en.wikipedia.org/wiki/DELE" target="_blank" class="link">Certyfikowany przez D.E.L.E. SUPERIOR - Instytut Cervantesa (2016)</a></li>
+                                <li>Francuski - A1 - podstawowy</li>
+                                <li>Rosyjski - A1 - podstawowy</li>
+                            </ul>
+                           </div>
+                       </div>
+                       </div>
+                    </section>
+     <!-- First Table Group -->
+     <section>
+     <div class="section-container">
+        <div class="about-grid">
+            <div class="details-container">
+                <img src="./assets/education.png" alt="Ikona edukacji" class="icon">
+                <h2>Edukacja</h2>
+                <ul class="no-bullets">
+                    <li>2016 - 2017: <strong>Studia Podyplomowe z Pedagogiki - Kształcenie dla Nauczycieli Szkół Średnich, uprawniające do uczestnictwa w konkursie państwowym "Oposiciones". Specjalizacja: język angielski.</strong> <a href="https://www.universidadviu.com/es/" target="_blank" class="link">Międzynarodowy Uniwersytet w Walencji</a>. Hiszpania.</li>
+                    <li>2009 - 2010: <strong>Studia Podyplomowe z Lingwistyki i Filologii Angielskiej. </strong> <a href="https://www.um.es/" target="_blank" class="link">Uniwersytet w Murcji</a>. Hiszpania.</li>
+                    <li>2007 - 2008: <strong>Stypendium Erasmusa - Filozofia Teoretyczna. </strong><a href="https://www.um.es/" target="_blank" class="link">Uniwersytet w Murcji</a>. Hiszpania.</li>
+                    <li>2003 - 2008: <strong>Studia Magisterskie z Filozofii Teoretycznej. </strong><a href="https://www.kul.pl/kul,21.html" target="_blank" class="link">Uniwersytet w Lublinie</a>. Polska.</li>
+            </ul> 
+            </div>
+            <div class="details-container">
+                <img src="./assets/courses.png" alt="Ikona kursu" class="icon">
+                <h2>Kursy</h2>
+                <ul class="no-bullets">
+                    <li>2024 - obecnie - <a href="https://www.youtube.com/watch?v=nLRL_NcnK-4" target="_blank" class="link">Harvard CS50’s Introduction to Programming with Python</a> – Pełny Kurs Uniwersytecki</li>
+                    <li>2024 - obecnie - <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/" target="_blank" class="link">Responsive Web Design (HTML, CSS) & JavaScript Algorithms and Data Structures (Beta), FreeCodeCamp</a></li>    
+                    <li>2024 - obecnie - HTML5, CSS3 - <a href="https://www.codecademy.com/" target="_blank" class="link">Codecademy</a></li>            
+                    <li>2024 - Kurs WordPress. <a href="https://eakademia.online/kurs-wordpress/" target="_blank" class="link">eAkademia.online</a></li>
+                    <li>2013 - 2014 - Tłumaczenie za pomocą SDL TRADOS STUDIO. <a href="https://www.aulasic.org/es" target="_blank" class="link">AulaSIC</a>. Barcelona. Hiszpania</li>
+                    <li>2016 - Edukacja Bez Seksizmu. <a href="https://www.anpe.es/" target="_blank" class="link">AMPE</a>. Murcia. Hiszpania</li> 
+                    <li>2006-2008 - Szkolenie Pedagogiczne. <a href="https://www.kul.pl/kul,21.html" target="_blank" class="link">Uniwersytet w Lublinie</a>. Polska</li>
+                </ul>
+            </div>
+        </div>
+        </div>
+     </section>
+        <!-- Work Experience Section -->
+     
+            <section id="experience" class="section-container">
+                <p class="section__text__p1">To jest moje</p>
+                <img src="./assets/work.png" alt="Work icon" class="icon">
+                <h1 class="title"> Doświadczenie Zawodowe</h1>
+                <div class="about-flex-container">
+                    <div class="details-container-work">
+            <ul class="no-bullets">
+                <li>
+                    <p>2020/obecnie: Nauczycielka angielskiego - użędnik poństwowy. <a href="https://www.carm.es/web/pagina?IDCONTENIDO=2015&IDTIPO=100&RASTRO=c$m122,123,1987" target="_blank" class="link">Regionalne Ministerstwo Edukacji</a>. Murcja. Hiszpania.</p>
+                    <ul>
+                        <li>Nauczanie języka angielskiego w szkole średniej</li> 
+                        <li>Przygotowanie uczniów do egzaminu wstępnego na uniwersytet (Selectividad)</li>
+                    </ul>
+                </li>
+                <br>
+                <li>
+                    <p>2020/2022: Nauczycielka angielskiego. <a href="https://international.ucam.edu/" target ="_parent" class="link">Uniwersytet San Antonio - UCAM</a>. Murcja. Hiszpania.</p>
+                    <ul class="no-bullets"> 
+                        <li>Nauczanie języka angielskiego na uniwersytecie</li>
+                        <li>Przygotowanie do egzaminów Trinity College London</li>
+                    </ul>
+                </li>
+                <br>
+                <li>
+                    <p>2018/2020: Nauczycielka angielskiego. <a href="https://ces-vegamedia.es/" target ="_parent" class="link">Szkoła Średnia Vega Media</a>. Murcja. Hiszpania.</p>
+                    <ul class="no-bullets"> 
+                        <li>Nauczanie języka angielskiego w szkole średniej</li>
+                        <li>Przygotowanie do egzaminów Trinity College London i Cambridge ESOL</li>
+                    </ul>
+                </li>
+                <br>
+                <li>
+                    <p>2017/2018: Nauczycielka filozofii, łaciny i angielskiego w szkole średniej. <a href="https://www.colegiolosolivos.es/sobre-nosotros/" target ="_parent" class="link">Szkoła Średnia Los Olivos</a>. Murcja. Hiszpania.</p>
+                    <ul class="no-bullets"> 
+                        <li>Nauczanie filozofii, łaciny i angielskiego w szkólw średniej</li>
+                    </ul>
+                </li>
+                <br>
+                <li>
+                    <p>2016/2017: Nauczycielka angielskiego. <a href="https://ces-vegamedia.es/" target ="_parent" class="link">Szkoła Średnia Vega Media</a>. Murcja. Hiszpania.</p>
+                    <ul class="no-bullets"> 
+                        <li>Nauczanie języka angielskiego w szkle średniej</li>
+                        <li>Przygotowanie do egzaminów Trinity College London i Cambridge ESOL</li>
+                    </ul>
+                </li>
+                <br>
+                <li>
+                    <p>2015/2016: Nauczycielka angielskiego. <a href="https://www.colegiolosolivos.es/sobre-nosotros/" target ="_parent" class="link">Szkoła Średnia Los Olivos</a>. Murcja. Hiszpania.</p>
+                    <ul class="no-bullets"> 
+                        <li>Nauczanie języka angielskiego w szkole średniej</li> 
+                        <li>Przygotowanie do egzaminów Trinity College London i Cambridge ESOL</li>
+                    </ul>
+                </li>
+                <br>
+                <li>
+                    <p>2014/2015: Nauczycielka angielskiego. <a href="https://academianativeenglish.com/" target ="_parent" class="link">Akademia Języka Angielskiego Native English</a>. Molina de Segura. Hiszpania.</p>
+                    <ul class="no-bullets"> 
+                        <li>Nauczanie języka angielskiego</li> 
+                        <li>Przygotowanie do egzaminów Trinity College London i Cambridge ESOL</li>
+                    </ul>
+                </li>
+                <br>
+                <li>
+                    <p>2012/2013: Nauczycielka angielskiego. <a href="https://www.fluency.es/" target ="_parent" class="link">Akademia Języka Angielskiego Fluency Idiomas</a>. Murcja. Hiszpania. </p>
+                    <ul class="no-bullets"> 
+                        <li>Nauczanie języka angielskiego</li>
+                        <li>Przygotowanie do egzaminów Trinity College London i Cambridge ESOL</li>
+                    </ul>
+                </li>
+                <br>
+                <li>
+                    <p>2011/2012: Nauczycielka angielskiego. <a href="https://www.marloweidiomas.com/" target ="_parent" class="link">Akademia Języka Angielskiego Marlowe Centro Idiomas</a>. Murcja. Hiszpania. </p>
+                    <ul class="no-bullets"> 
+                        <li>Nauczanie języka angielskiego</li>
+                        <li>Przygotowanie do egzaminów Trinity College London i Cambridge ESOL</li>
+                    </ul>
+                </li>
+                <br>
+                <li>
+                    <p>2010/2011: Tłumacz - Staż. <a href="https://empresite.eleconomista.es/EUROPEA-EDIFICIOS-PREFABRICADOS.html" target ="_parent" class="link">Europea de Edificios Prefabricados S.L.</a> Murcja. Hiszpania.</p>
+                    <ul class="no-bullets"> 
+                        <li>Tłumaczenie dokumentów i katalogu firmy (hiszpański<>angielski, polski<>hiszpański)</li>
+                    </ul>
+                </li>
+                <br>
+                <li>
+                    <p>2009: Tłumacz - Staż. <a href="https://murcia-acoge.com/" target ="_parent" class="link">Stowarzyszenie Murcia Acoge</a>. Hiszpania.</p>
+                    <ul class="no-bullets"> 
+                        <li>Tłumaczenia pisemne i ustne dotyczące sytuacji imigrantów w Hiszpanii (hiszpański<>angielski, hiszpański<>polski)</li>
+                    </ul>
+                </li>
+                <br>
+                <li>
+                    <p>2007: <a href="https://www.3lo.lublin.pl/" target ="_parent" class="link">Liceum Ogólnokształcące nr III im. Unii Lubelskiej</a>. Lublin. Polska. </p>
+                    <ul class="no-bullets"> 
+                        <li>Nauczanie filozofii i etyki</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="offer" class="section-container">
+        <p class="section__text__p1">Zapoznaj się z moją</p>
+        <img src="./assets/offer.png" alt="Ikona oferty" class="icon">
+        <h1 class="title">Ofertą</h1><br>
+        <h1>PRZYGOTOWANIE DO EGZAMINÓW OFICJALNYCH</h1>
+        <ul class="no-bullets">
+            <li>15 lat doświadczenia w nauczaniu języków obcych za granicą</li>
+        </ul>
+    </section>
+    
+    <section>
+        <div class="section-container">
+            <div class="about-grid">
+                <div class="details-container">
+                    <img src="./assets/cambridge.png" alt="Ikona Cambridge" class="icon2">
+                    <p>Przygotowanie do poziomów:</p>
+                    <ul class="no-bullets">
+                        <li>A1</li>
+                        <li>A2</li>
+                        <li>B1</li>
+                        <li>B2</li>
+                        <li>C1</li>
+                        <li>C2</li>
+                    </ul>
+                </div>
+                <div class="details-container">
+                    <img src="./assets/trinity.png" alt="Trinity" class="icon2">
+                    <p>Przygotowanie do poziomów:</p>
+                    <ul class="no-bullets">
+                        <li>A1</li>
+                        <li>A2</li>
+                        <li>B1</li>
+                        <li>B2</li>
+                        <li>C1</li>
+                        <li>C2</li>
+                    </ul>
+                </div>
+                <div class="details-container">
+                    <img src="./assets/goal.png" alt="Trinity" class="icon3">
+                    <h2>Kursy dla:</h2>
+                    <ul class="no-bullets">
+                        <li>DZIECI</li>
+                        <li>MŁODZIEŻY</li>
+                        <li>DOROSŁYCH</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="section-container">
+        <p class="section__text__p1">Oto moje</p>
+        <img src="./assets/contact.jpg" alt="Ikona kontaktu" class="icon">
+        <h1 class="title">Informacje Kontaktowe</h1>
+        <div class="about-flex-container">
+            <div class="details-container-work">
+                <ul class="no-bullets">
+                    <li>
+                        <img src="./assets/email.png" alt="Ikona email" class="icon">
+                        <p class="section__text__p1">ewa.puhacz@gmail.com</p>
+                    </li>
+                    <li>
+                        <img src="./assets/phone.png" alt="Ikona telefonu" class="icon">
+                        <p class="section__text__p1">0034 722 54 82 86</p>
+                    </li>
+                    <li>
+                        <img src="./assets/location.png" alt="Ikona lokalizacji" class="icon">
+                        <p class="section__text__p1">30720, Murcia, Hiszpania</p>
+                    </li>
+                </ul> 
+            </div>
+        </div>
+    </section>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
